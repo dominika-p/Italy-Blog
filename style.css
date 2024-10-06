@@ -1,0 +1,656 @@
+:root {
+	--primary-color: #333;
+	--secondary-color: #fff;
+	--accent-color: palevioletred;
+	--text-color: #333;
+	--font-size-base: 18px;
+	--font-size-header: 24px;
+	--font-size-footer: 20px;
+	--transition-duration: 0.3s;
+	--box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* Nawigacja */
+.nav {
+	height: 50px;
+	background-color: var(--primary-color);
+	text-align: center;
+	line-height: 50px;
+	font-size: 0;
+	position: relative;
+}
+
+.hamburger {
+	display: block;
+	font-size: 24px;
+	color: var(--secondary-color);
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.nav-menu {
+	top: 100%;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height var(--transition-duration) ease-out, background-color var(--transition-duration);
+	background-color: var(--primary-color);
+}
+
+.nav-menu.show {
+	max-height: 500px;
+}
+
+.nav-item {
+	text-align: center;
+	margin: 0 10px;
+}
+
+.nav-item a {
+	color: var(--secondary-color);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: color var(--transition-duration);
+	font-size: 14px;
+}
+
+.nav-item a:hover {
+	color: var(--accent-color);
+}
+
+/* Nagłówek */
+header {
+	color: var(--secondary-color);
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.header-img {
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background-image: url('/zdjęcia/coloseum\ rome.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.header-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--secondary-color);
+	z-index: 5;
+	text-align: left;
+}
+
+.header-text h1 {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.header-text p {
+	font-size: var(--font-size-base);
+}
+
+/* Main */
+main {
+	margin: 50px auto;
+}
+
+section {
+	margin: 50px auto 0 auto;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+section h2 {
+	margin-bottom: 30px;
+}
+
+section p {
+	font-size: var(--font-size-base);
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 10px;
+	text-align: justify;
+}
+
+.section-img, .section-img1, .section-img2 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.section-img {
+	background-image: url('/zdjęcia/varenna-village-lombardy-italy.jpg');
+}
+
+.section-img1 {
+	background-image: url('/zdjęcia/canal-travel-by-gondolier-famous-italian-city-generative-ai.jpg');
+}
+
+.section-img2 {
+	background-image: url('/zdjęcia/view-tyrrhenian-sea-coast-capri-italy.jpg');
+}
+
+/*mediolan*/
+
+.mediolan-img, .mediolan-img1, .mediolan-img2, .mediolan-img3, .mediolan-img4, .mediolan-img5 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 80px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.mediolan-img {
+	background-image: url('/zdjęcia/mediolan/widok-katedry-o-wschodzie-slonca-mediolan-europa.jpg');
+}
+
+.mediolan-img1 {
+	background-image: url('/zdjęcia/mediolan/Milano_002.jpg');
+}
+
+.mediolan-img2 {
+	background-image: url('/zdjęcia/mediolan/katedra.jpg');
+}
+
+.mediolan-img3 {
+	background-image: url('/zdjęcia/mediolan/28652.jpg');
+}
+
+.mediolan-img4 {
+	background-image: url('/zdjęcia/mediolan/Zamek-Sforzow-w-Mediolanie_3.jpg');
+}
+
+.mediolan-img5 {
+	background-image: url('/zdjęcia/mediolan/brera.jpg');
+}
+
+/*rzym*/
+
+.rzym-img, .rzym-img1, .rzym-img2, .rzym-img3, .rzym-img4, .rzym-img5 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 80px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.rzym-img {
+	background-image: url('/zdjęcia/rzym/view-tiber-river-center-rome-italy.jpg');
+}
+
+.rzym-img1 {
+	background-image: url('/zdjęcia/rzym/Forum_Romanum_April_05.jpg');
+}
+
+.rzym-img2 {
+	background-image: url('/zdjęcia/rzym/beautiful-shot-famous-roman-colosseum-amphitheater-breathtaking-sky-sunrise.jpg');
+}
+
+.rzym-img3 {
+	background-image: url('/zdjęcia/rzym/wsi-imageoptim-rzym-panteon-fasada.jpg');
+}
+
+.rzym-img4 {
+	background-image: url('/zdjęcia/rzym/brown-concrete-house.jpg');
+}
+
+.rzym-img5 {
+	background-image: url('/zdjęcia/rzym/cityscape-rome-ancient-centre-italy_1268-20482.jpg');
+}
+
+/*wenecja*/
+
+.wenecja-img, .wenecja-img1, .wenecja-img2, .wenecja-img3, .wenecja-img4, .wenecja-img5 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 80px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.wenecja-img {
+	background-image: url('/zdjęcia/wenecja/view-beautiful-architecture-venice-italy-daylight.jpg');
+}
+
+.wenecja-img1 {
+	background-image: url('/zdjęcia/wenecja/historia.jpg');
+}
+
+.wenecja-img2 {
+	background-image: url('/zdjęcia/wenecja/Wenecja-bazylika-św.-Marka.jpg');
+}
+
+.wenecja-img3 {
+	background-image: url('/zdjęcia/wenecja/Wenecja-Plac-sw-Marka.jpg');
+}
+
+.wenecja-img4 {
+	background-image: url('/zdjęcia/wenecja/canal-architecture-showcases-vibrant-colors-tranquil-landscapes-generative-ai.jpg');
+}
+
+.wenecja-img5 {
+	background-image: url('/zdjęcia/wenecja/high-angle-shot-gondolas-parked-canal-venice-italy.jpg');
+}
+
+/*neapol*/
+
+.neapol-img, .neapol-img1, .neapol-img2, .neapol-img3, .neapol-img4, .neapol-img5 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 80px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.neapol-img {
+	background-image: url('/zdjęcia/neapol/aerial-shot-cityscape-polignano-mare-town-puglia-region-italy.jpg');
+}
+
+.neapol-img1 {
+	background-image: url('/zdjęcia/neapol/neapol.jpg');
+}
+
+.neapol-img2 {
+	background-image: url('/zdjęcia/neapol/Pompeje-podczas-zwiedzania.jpg');
+}
+
+.neapol-img3 {
+	background-image: url('/zdjęcia/neapol/IMG_8208.JPG');
+}
+
+.neapol-img4 {
+	background-image: url('/zdjęcia/neapol/muzeum-archeologiczne-lead.jpg');
+}
+
+.neapol-img5 {
+	background-image: url('/zdjęcia/neapol/ciasne-zaulki-quartieri-spagnoli-w-neapolu_1086142.jpg');
+}
+
+/*amalfi*/
+
+.amalfi-img, .amalfi-img1, .amalfi-img2, .amalfi-img3, .amalfi-img4, .amalfi-img5 {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 80px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.amalfi-img {
+	background-image: url('/zdjęcia/amalfi/Amalfi-1.jpg');
+}
+
+.amalfi-img1 {
+	background-image: url('/zdjęcia/amalfi/amalfi2.jpg');
+}
+
+.amalfi-img2 {
+	background-image: url('/zdjęcia/amalfi/positano_3.jpg');
+}
+
+.amalfi-img3 {
+	background-image: url('/zdjęcia/amalfi/Amalfi4.jpg');
+}
+
+.amalfi-img4 {
+	background-image: url('/zdjęcia/amalfi/ravello\ 5.jpg');
+}
+
+.amalfi-img5 {
+	background-image: url('/zdjęcia/amalfi/limoncello_italy_blog.jpg');
+}
+
+/* galeria */
+.zdj1-img, .zdj2-img, .zdj3-img, .zdj4-img, .zdj5-img, .zdj6-img, .zdj7-img, .zdj8-img, .zdj9-img, .zdj10-img, .zdj11-img {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	display: block;
+	margin: 20px auto 10px auto;
+	background-size: cover;
+	background-position: center;
+}
+
+.zdj1-img {
+	background-image: url('/zdjęcia/galeria/1.jpg');
+}
+
+.zdj2-img {
+	background-image: url('/zdjęcia/galeria/2.jpg');
+}
+
+.zdj3-img {
+	background-image: url('/zdjęcia/galeria/3.jpg');
+}
+
+.zdj4-img {
+	background-image: url('/zdjęcia/galeria/4.jpg');
+}
+
+.zdj5-img {
+	background-image: url('/zdjęcia/galeria/5.jpg');
+}
+
+.zdj6-img {
+	background-image: url('/zdjęcia/galeria/6.jpg');
+}
+
+.zdj7-img {
+	background-image: url('/zdjęcia/galeria/7.jpg');
+}
+
+.zdj8-img {
+	background-image: url('/zdjęcia/galeria/8.jpg');
+}
+
+.zdj9-img {
+	background-image: url('/zdjęcia/galeria/9.jpg');
+}
+
+.zdj10-img {
+	background-image: url('/zdjęcia/galeria/10.jpg');
+}
+
+.zdj11-img {
+	background-image: url('/zdjęcia/galeria/11.jpg');
+}
+
+/* Sekcja o nas */
+.about-us-box {
+	position: relative;
+	background-color: var(--secondary-color);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: var(--box-shadow);
+	margin-bottom: 40px;
+}
+
+.about-us-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('about-us-background.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	border-radius: 5px;
+}
+
+.about-us-text {
+	position: relative;
+	z-index: 1;
+	color: var(--text-color);
+	text-align: justify;
+}
+
+.about-us-text h3 {
+	font-size: var(--font-size-header);
+	margin-bottom: 10px;
+}
+
+.about-us-text p {
+	font-size: var(--font-size-base);
+}
+
+/* Sekcja Destynacje */
+.destynacja {
+	background-color: var(--secondary-color);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: var(--box-shadow);
+	text-align: center;
+}
+
+.destynacja h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.destynacja p {
+	font-size: var(--font-size-base);
+}
+
+/*kontakt*/
+.contact {
+	max-width: 500px;
+	margin-top: 20px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.contact form {
+	display: grid;
+	gap: 10px;
+}
+
+.contact label {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 30px;
+	
+}
+
+.contact input[type='text'],
+.contact input[type='email'],
+.contact textarea,
+.contact button {
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+.contact textarea {
+	resize: vertical;
+}
+
+.contact button {
+	height: 48px;
+	padding: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+	background-color: #0056b3;
+}
+
+/* Stopka */
+footer {
+	height: 80px;
+	background-color: var(--primary-color);
+	color: #ddd;
+	text-align: center;
+	font-size: var(--font-size-footer);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	margin: 0;
+	margin-right: 20px;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+}
+
+.social-icons a {
+	margin: 0 5px;
+	color: #ddd;
+	font-size: 30px;
+	transition: color var(--transition-duration);
+}
+
+.social-icons a:hover {
+	color: #0086f3;
+}
+
+/* Responsywność */
+@media (min-width: 947px) {
+	.hamburger {
+		display: none;
+	}
+
+	.nav-menu {
+		position: absolute;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		top: initial;
+		width: auto;
+		max-height: initial;
+		overflow: visible;
+	}
+
+	.nav-item a {
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 992px) {
+	.header-img {
+		height: 400px;
+	}
+
+	.header-text h1 {
+		font-size: 32px;
+	}
+
+	.header-text p {
+		font-size: 16px;
+	}
+
+	.section-img, .section-img1, .section-img2 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.mediolan-img, .mediolan-img1, .mediolan-img2, .mediolan-img3, .mediolan-img4, .mediolan-img5 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.rzym-img, .rzym-img1, .rzym-img2, .rzym-img3, .rzym-img4, .rzym-img5 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.wenecja-img, .wenecja-img1, .wenecja-img2, .wenecja-img3, .wenecja-img4, .wenecja-img5 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.neapol-img, .neapol-img1, .neapol-img2, .neapol-img3, .neapol-img4, .neapol-img5 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.amalfi-img, .amalfi-img1, .amalfi-img2, .amalfi-img3, .amalfi-img4, .amalfi-img5 {
+		height: 400px;
+		width: 980px;
+	}
+
+	.zdj1-img, .zdj2-img, .zdj3-img, .zdj4-img, .zdj5-img, .zdj6-img, .zdj7-img, .zdj8-img, .zdj9-img, .zdj10-img, .zdj11-img {
+		height: 400px;
+		width: 980px;
+	}
+}
+
+/* Sekcja Destynacje */
+.destinations-container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin: 20px 0;
+}
+
+.destination {
+	position: relative;
+	width: 200px;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.destination a {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: background-color var(--transition-duration);
+}
+
+.destination a:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
